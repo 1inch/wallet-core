@@ -18,8 +18,8 @@ pushd ${base_dir}/../swift/build
 # archive xcframeworks
 core_zip_filename="WalletCore.xcframework.zip"
 core_dsyms_filename="WalletCore.xcframework.dSYM.zip"
-protobuf_zip_filename="SwiftProtobuf.xcframework.zip"
-protobuf_dsyms_filename="SwiftProtobuf.xcframework.dSYM.zip"
+protobuf_zip_filename="TWSwiftProtobuf.xcframework.zip"
+protobuf_dsyms_filename="TWSwiftProtobuf.xcframework.dSYM.zip"
 
 rm -rf ${core_zip_filename} ${core_dsyms_filename} ${protobuf_zip_filename} ${protobuf_dsyms_filename}
 
@@ -28,9 +28,9 @@ zip -r ${core_dsyms_filename} WalletCore.dSYMs
 zip -r ${core_zip_filename} WalletCore.xcframework
 core_hash=$(/usr/bin/shasum -a 256 ${core_zip_filename} | awk '{printf $1}')
 
-zip -r ${protobuf_dsyms_filename} SwiftProtobuf.dSYMs
+zip -r ${protobuf_dsyms_filename} TWSwiftProtobuf.dSYMs
 
-zip -r ${protobuf_zip_filename} SwiftProtobuf.xcframework
+zip -r ${protobuf_zip_filename} TWSwiftProtobuf.xcframework
 protobuf_hash=$(/usr/bin/shasum -a 256 ${protobuf_zip_filename} | awk '{printf $1}')
 
 # upload to release
@@ -52,7 +52,7 @@ let package = Package(
     platforms: [.iOS(.v13)],
     products: [
         .library(name: "WalletCore", targets: ["WalletCore"]),
-        .library(name: "SwiftProtobuf", targets: ["SwiftProtobuf"])
+        .library(name: "TWSwiftProtobuf", targets: ["TWSwiftProtobuf"])
     ],
     dependencies: [],
     targets: [
@@ -62,7 +62,7 @@ let package = Package(
             checksum: "${core_hash}"
         ),
         .binaryTarget(
-            name: "SwiftProtobuf",
+            name: "TWSwiftProtobuf",
             url: ${protobuf_download_url},
             checksum: "${protobuf_hash}"
         )
