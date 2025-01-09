@@ -3,7 +3,7 @@
 wc_read_version() {
     version=$1
     if [ -z "${version}" ]; then
-        version=$(git describe --long --tags | cut -f 1 -d "-")
+        version=$(git describe --tags --abbrev=0)
     fi
     echo ${version}
 }
