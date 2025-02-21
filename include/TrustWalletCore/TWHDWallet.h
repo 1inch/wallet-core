@@ -33,6 +33,15 @@ struct TWHDWallet;
 TW_EXPORT_STATIC_METHOD
 struct TWHDWallet* _Nullable TWHDWalletCreate(int strength, TWString* _Nonnull passphrase);
 
+/// Creates an HDWallet from an arbitary seed.
+///
+/// \param seed non-null seed
+/// \note Null is returned on invalid seed
+/// \note Returned object needs to be deleted with \TWHDWalletDelete
+/// \return Nullable TWHDWallet
+TW_EXPORT_STATIC_METHOD
+struct TWHDWallet *_Nullable TWHDWalletCreateWithSeed(TWData *_Nonnull seed);
+
 /// Creates an HDWallet from a valid BIP39 English mnemonic and a passphrase.
 ///
 /// \param mnemonic non-null Valid BIP39 mnemonic

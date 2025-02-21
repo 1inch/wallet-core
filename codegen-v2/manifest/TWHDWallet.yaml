@@ -20,6 +20,16 @@ inits:
       is_constant: true
       is_nullable: false
       is_pointer: true
+- name: TWHDWalletCreateWithSeed
+  is_public: true
+  is_nullable: true
+  params:
+  - name: seed
+    type:
+      variant: data
+      is_constant: true
+      is_nullable: false
+      is_pointer: true
 - name: TWHDWalletCreateWithMnemonic
   is_public: true
   is_nullable: true
