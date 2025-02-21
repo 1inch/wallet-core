@@ -27,11 +27,11 @@ tools/install-dependencies
 echo "#### Installing Rust toolchain and tools ... ####"
 tools/install-rust-dependencies dev
 
-# WASM
-if isTargetSpecified "wasm"; then
-  echo "#### Installing WASM environment ... ####"
-  tools/install-wasm-dependencies
-fi
+# # WASM
+# if isTargetSpecified "wasm"; then
+#   echo "#### Installing WASM environment ... ####"
+#   tools/install-wasm-dependencies
+# fi
 
 # Android
 if isTargetSpecified "android"; then
