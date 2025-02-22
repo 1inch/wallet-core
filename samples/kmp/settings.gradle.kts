@@ -30,7 +30,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven {
-            url = uri("https://maven.pkg.github.com/trustwallet/wallet-core")
+            url = uri("https://maven.pkg.github.com/1inch/wallet-core")
             credentials {
                 username = properties["gpr.user"] as? String ?: System.getenv("GITHUB_USER")
                 password = properties["gpr.key"] as? String ?: System.getenv("GITHUB_TOKEN")

@@ -27,7 +27,7 @@ allprojects {
         google()
         mavenCentral()
         maven {
-            url = uri("https://maven.pkg.github.com/trustwallet/wallet-core")
+            url = uri("https://maven.pkg.github.com/1inch/wallet-core")
             credentials {
                 username = properties.getProperty("gpr.user") as String?: System.getenv("GITHUB_USER")
                 password = properties.getProperty("gpr.key") as String?: System.getenv("GITHUB_TOKEN")
