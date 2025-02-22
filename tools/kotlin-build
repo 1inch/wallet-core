@@ -6,6 +6,11 @@ if [[ `uname` == "Darwin" ]]; then
     export BOOST_ROOT=$(brew --prefix boost)
 fi
 
+# Build libTrustWalletCore.dylib
+cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release -DTW_UNITY_BUILD=ON -DTW_COMPILE_JAVA=ON -DTW_COMPILE_KOTLIN=ON -GNinja
+ninja -Cbuild
+mv build/libTrustWalletCore.dylib kotlin/wallet-core-kotlin/src/jvmMain/resources/jni/macos-arm64/
+
 pushd kotlin
 ./gradlew :wallet-core-kotlin:generateProtos
 ./gradlew :wallet-core-kotlin:assemble
