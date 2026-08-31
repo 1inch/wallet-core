@@ -30,7 +30,7 @@
     "dist"
   ],
   "dependencies": {
-    "protobufjs": ">=6.11.3"
+    "protobufjs": "^8.8.0"
   },
   "devDependencies": {
     "@types/chai": "^4.3.0",
@@ -39,8 +39,18 @@
     "@types/webextension-polyfill": "^0.9.0",
     "buffer": "^6.0.3",
     "chai": "^4.3.6",
-    "mocha": "^10.1.0",
+    "mocha": "^11.8.0",
+    "protobufjs-cli": "^2.7.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
+  },
+  "overrides": {
+    "serialize-javascript": "^7.0.5",
+    "mocha": {
+      "diff": "^8.0.3"
+    },
+    "ts-node": {
+      "diff": "^4.0.4"
+    }
   }
 }
