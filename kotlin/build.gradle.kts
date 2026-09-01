@@ -27,7 +27,7 @@ allprojects {
 rootProject.plugins.withType<org.jetbrains.kotlin.gradle.targets.js.yarn.YarnPlugin> {
     rootProject.the<org.jetbrains.kotlin.gradle.targets.js.yarn.YarnRootExtension>().apply {
         resolution("webpack", "5.104.1")
-        resolution("lodash", "4.18.0")
+        resolution("lodash", "4.18.1")
         resolution("decode-uri-component", "0.5.0")
         resolution("engine.io", "6.6.7")
         resolution("nanoid", "3.3.18")
@@ -39,7 +39,7 @@ rootProject.plugins.withType<org.jetbrains.kotlin.gradle.targets.js.yarn.YarnPlu
         resolution("serialize-javascript", "7.0.5")
         resolution("picomatch", "2.3.2")
         resolution("flatted", "3.4.2")
-        resolution("qs", "6.14.2")
+        resolution("qs", "6.15.1")
         resolution("diff", "5.2.2")
         resolution("cookie", "0.7.2")
         resolution("cross-spawn", "7.0.6")

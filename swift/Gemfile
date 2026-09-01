@@ -4,6 +4,8 @@
 
 source "https://rubygems.org"
 
+ruby '>= 3.2.0'
+
 # Fastlane 2.238+ allows the patched excon/jwt/addressable/faraday
 # releases Dependabot flagged. Used only for xcframework packaging —
 # not linked into WalletCore Swift sources.
