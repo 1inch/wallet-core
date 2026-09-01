@@ -4,7 +4,12 @@
 
 source "https://rubygems.org"
 
-gem 'fastlane'
+ruby '>= 3.2.0'
+
+# Fastlane 2.238+ allows the patched excon/jwt/addressable/faraday
+# releases Dependabot flagged. Used only for xcframework packaging —
+# not linked into WalletCore Swift sources.
+gem 'fastlane', '>= 2.238.0'
 
 plugins_path = File.join(File.dirname(__FILE__), 'fastlane', 'Pluginfile')
 eval_gemfile(plugins_path) if File.exist?(plugins_path)

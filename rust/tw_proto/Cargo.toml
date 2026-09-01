@@ -12,4 +12,4 @@ arbitrary = { version = "1", features = ["derive"], optional = true }
 quick-protobuf = "0.8.1"
 
 [build-dependencies]
-pb-rs = "0.10.0"
+pb-rs = { version = "0.10.0", default-features = false }

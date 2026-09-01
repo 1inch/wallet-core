@@ -15,7 +15,7 @@ path = ".."
 
 
 [dependencies.tw_keypair]
-path = "../../tw_keypair"
+path = "../../../tw_keypair"
 
 # Prevent this from interfering with workspaces
 [workspace]
