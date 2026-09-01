@@ -26,4 +26,4 @@ tw_cosmos_sdk = { path = "./", features = ["test-utils"] }
 tw_misc = { path = "../tw_misc", features = ["test-utils"] }
 
 [build-dependencies]
-pb-rs = "0.10.0"
+pb-rs = { version = "0.10.0", default-features = false }

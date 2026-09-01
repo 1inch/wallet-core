@@ -14,4 +14,4 @@ tw_memory = { path = "../../tw_memory" }
 tw_proto = { path = "../../tw_proto" }
 
 [build-dependencies]
-pb-rs = "0.10.0"
+pb-rs = { version = "0.10.0", default-features = false }
