@@ -29,7 +29,7 @@ rootProject.plugins.withType<org.jetbrains.kotlin.gradle.targets.js.yarn.YarnPlu
         resolution("webpack", "5.104.1")
         resolution("lodash", "4.18.1")
         resolution("decode-uri-component", "0.5.0")
-        resolution("engine.io", "6.6.7")
+        resolution("engine.io", "6.6.10")
         resolution("nanoid", "3.3.18")
         resolution("js-yaml", "4.3.2")
         resolution("socket.io-parser", "4.2.7")
