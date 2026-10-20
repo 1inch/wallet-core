@@ -46,5 +46,6 @@ rootProject.plugins.withType<org.jetbrains.kotlin.gradle.targets.js.yarn.YarnPlu
         resolution("braces", "3.0.3")
         resolution("follow-redirects", "1.16.0")
         resolution("rollup", "2.80.0")
+        resolution("source-map-js", "1.2.2")
     }
 }
